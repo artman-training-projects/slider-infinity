@@ -1,0 +1,551 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version
+*/
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Muller";
+
+  font-display: swap;
+  src: url("../fonts/muller-bold.woff2") format("woff2"),
+  url("../fonts/muller-bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Muller";
+
+  font-display: swap;
+  src: url("../fonts/muller-regular.woff2") format("woff2"),
+  url("../fonts/muller-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Muller";
+
+  font-display: swap;
+  src: url("../fonts/muller-medium.woff2") format("woff2"),
+  url("../fonts/muller-medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Rouble";
+
+  font-display: swap;
+  src: url("../fonts/rouble.woff2") format("woff2"),
+  url("../fonts/rouble.woff") format("woff");
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-width: 1200px;
+}
+
+body {
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Muller", "Arial", sans-serif;
+  color: #000000;
+
+  background-color: #fafafa;
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.main {
+      flex: 1 0 auto;
+  -webkit-box-flex: 1;
+
+  -ms-flex: 1 0 auto;
+}
+
+.header,
+.footer {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.container--no-padding {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.logo {
+  position: relative;
+  left: -2px;
+
+  display: block;
+  width: -webkit-fit-content;
+  width:    -moz-fit-content;
+  width:         fit-content;
+}
+
+.rouble {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Rouble";
+}
+
+.slider {
+  position: relative;
+}
+
+.slider__wrapper {
+  position: relative;
+  z-index: 1;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  min-height: 322px;
+  padding-top: 24px;
+  padding-right: 20px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+  overflow: hidden;
+
+  background-color: #fafafa;
+}
+
+.slider--in-move .slider__wrapper {
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.slider__list {
+  position: relative;
+  left: 0;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 500%;
+  margin: 0;
+  margin-right: -11px;
+  margin-left: -11px;
+  padding: 0;
+
+  list-style: none;
+
+  -webkit-transition: -webkit-transform 0.6s ease;
+          transition: -webkit-transform 0.6s ease;
+          transition:         transform 0.6s ease;
+          transition:         transform 0.6s ease, -webkit-transform 0.6s ease;
+}
+
+.slider__list::-webkit-scrollbar {
+  display: none;
+}
+
+.slider__item {
+  -webkit-backface-visibility: hidden;
+
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.slider__button {
+  position: absolute;
+  top: calc(50% - 33px);
+  z-index: 10;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+          transition: -webkit-box-shadow 0.3s ease;
+          transition:         box-shadow 0.3s ease;
+          transition:         box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.slider__button:hover,
+.slider__button:active {
+  outline: none;
+  -webkit-box-shadow: 0 0 18px 1px rgba(108, 99, 255, 0.2);
+          box-shadow: 0 0 18px 1px rgba(108, 99, 255, 0.2);
+}
+
+.slider__button--prev {
+  left: 0;
+}
+
+.slider__button--next {
+  right: 0;
+}
+
+.heading {
+  width: -webkit-fit-content;
+  width:    -moz-fit-content;
+  width:         fit-content;
+  margin: 0;
+
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  color: #000000;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+
+  min-height: 80px;
+
+  background: #ffffff;
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 24px;
+  padding-bottom: 14px;
+}
+
+.banner {
+  padding-top: 17px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Muller";
+  color: #000000;
+
+  background-color: #fafafa;
+}
+
+.banner__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-right: 153px;
+  padding-left: 180px;
+}
+
+.banner__text {
+  max-width: 392px;
+  margin-top: 22px;
+}
+
+.banner__heading {
+  margin-bottom: 16px;
+}
+
+.banner__description {
+  margin: 0;
+
+  color: #999999;
+}
+
+.banner__image {
+  margin-top: 3px;
+  margin-left: auto;
+}
+
+.banner__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.goods {
+  padding-top: 20px;
+  padding-bottom: 46px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "Muller";
+  color: #000000;
+
+  background-color: #fafafa;
+}
+
+.goods__heading {
+  margin: 0 auto;
+  margin-bottom: 3px;
+
+  text-align: center;
+}
+
+.goods__item {
+      flex: 0 0 236px;
+  -webkit-box-flex: 0;
+  width: 100%;
+  min-height: 296px;
+  padding-right: 11px;
+  padding-left: 11px;
+
+  -ms-flex: 0 0 236px;
+}
+
+.product {
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  border-radius: 2px;
+
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+          transition: -webkit-box-shadow 0.3s ease;
+          transition:         box-shadow 0.3s ease;
+          transition:         box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.product:hover,
+.product:active {
+  outline: none;
+  -webkit-box-shadow: 0 0 16px 1px rgba(108, 99, 255, 0.16);
+          box-shadow: 0 0 16px 1px rgba(108, 99, 255, 0.16);
+}
+
+.product:hover .product__description,
+.product:active .product__description {
+  background-color: #ffffff;
+}
+
+.product:hover .product__image,
+.product:active .product__image {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0
+}
+
+.product__sale-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: none;
+  padding-top: 8px;
+  padding-right: 22px;
+  padding-bottom: 9px;
+  padding-left: 19px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+
+  background-color: #f55f44;
+
+  -webkit-clip-path: polygon(0 0, 100% 0%, 95% 82%, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 95% 82%, 0 100%);
+}
+
+.product__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 248px;
+  overflow: hidden;
+
+  border-radius: 2px;
+
+  -webkit-transition: border-radius 0.3s ease;
+          transition: border-radius 0.3s ease;
+}
+
+
+.product__image img {
+  height: 100%;
+
+  background-color: #999999;
+
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 11px;
+  padding-right: 10px;
+  padding-bottom: 9px;
+  padding-left: 10px;
+}
+
+.product__price {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
+  margin: 0;
+  margin-bottom: 3px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #6c63ff;
+}
+
+.product__price .rouble {
+  margin-left: 4px;
+  padding-top: 2px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  vertical-align: top;
+}
+
+.product__price-value {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.product__price-value--old {
+  display: none;
+  margin-left: 6px;
+  padding-top: 2px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ababab;
+  text-decoration: line-through;
+}
+
+.product__heading {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.product--sale .product__price {
+  color: #f55f44;
+}
+
+.product--sale .product__sale-label {
+  display: block;
+}
+
+.product--sale .product__price-value--old {
+  display: initial;
+}
