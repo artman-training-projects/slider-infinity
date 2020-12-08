@@ -1,39 +1,37 @@
-{
-  "main": [
-    {
-      "name": "ASUS",
-      "key": "main_1",
-      "enabled": 1
-    },
-    {
-      "name": "ACER",
-      "key": "main_2",
-      "enabled": 1
-    },
-    {
-      "name": "MSI",
-      "key": "main_3",
-      "enabled": 0
-    }
-  ],
-  "items": [
-    {
-      "name": "Ноутбук 1",
-      "key": "item_1",
-      "processor_image_name": "evo_i5",
-      "enabled": 1
-    },
-    {
-      "name": "Ноутбук 2",
-      "key": "item_2",
-      "processor_image_name": "evo_i5",
-      "enabled": 1
-    },
-    {
-      "name": "Ноутбук 3",
-      "key": "item_3",
-      "processor_image_name": "evo_i7",
-      "enabled": 1
-    }
-  ]
-}
+"main": [
+  {
+    "name": "ASUS",
+    "key": "main_1",
+    "enabled": 1
+  },
+  {
+    "name": "ACER",
+    "key": "main_2",
+    "enabled": 1
+  },
+  {
+    "name": "MSI",
+    "key": "main_3",
+    "enabled": 0
+  }
+],
+"items": [
+  {
+    "name": "Ноутбук 1",
+    "key": "item_1",
+    "processor_image_name": "evo_i5",
+    "enabled": 1
+  },
+  {
+    "name": "Ноутбук 2",
+    "key": "item_2",
+    "processor_image_name": "evo_i5",
+    "enabled": 1
+  },
+  {
+    "name": "Ноутбук 3",
+    "key": "item_3",
+    "processor_image_name": "evo_i7",
+    "enabled": 1
+  }
+]
